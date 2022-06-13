@@ -24,4 +24,22 @@ void populations() {
   musicInfoY = playPauseY;
   musicInfoWidth = displayWidth*6/20;
   musicInfoHeight = playPauseHeight;
+  //
+  //
+  paperX = displayWidth;
+  paperY = displayHeight;
+  paperWidth = displayWidth;
+  paperHeight = displayHeight;
+  //
+  quitButtonX = displayWidth*19/20;
+  quitButtonY  = displayHeight*0/20;
+  quitButtonWidth = displayWidth*1/20;
+  quitButtonHeight = displayHeight*1/20;
+  //
+  templateBowlX = displayWidth*7/20;
+  templateBowlY = displayHeight*0.2/20;
+  templateBowlWidth = displayWidth*2/20;
+  templateBowlHeight = displayHeight*1/20;
+  //
+
 }

@@ -1,6 +1,17 @@
 void rects() {
   //rects
   //
+  //
+  //quit
+  fill(quitButtonColour);
+  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  fill(white);
+  fill(black); 
+  textAlign (CENTER, CENTER);
+  size = 25;
+  textFont(font, size);
+  text(quitButtonString, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  //
   //play pause
   strokeWeight(1);
   fill(playPauseColour); 
@@ -25,6 +36,17 @@ void rects() {
   strokeWeight(1);
   fill(stopButtonColour); 
   rect(stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight);
+  //
+  //template bowl
+  strokeWeight(1);
+  fill(tempBowlColor); 
+  rect(templateBowlX, templateBowlY, templateBowlWidth, templateBowlHeight);
+  fill(black);
+  textAlign (CENTER, CENTER);
+  size = 20;
+  textFont(font, size);
+  text(templateBowlString, templateBowlX, templateBowlY, templateBowlWidth, templateBowlHeight);
+  //
   //
   strokeWeight(1);
   fill(redC );
@@ -59,4 +81,7 @@ void rects() {
   strokeWeight(1);
   fill(255);
   rect(250, 10, 50, 50);
+  //
+  fill(white);
+  rect(paperX, paperY, paperWidth, paperHeight);
 }

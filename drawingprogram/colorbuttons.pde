@@ -68,7 +68,10 @@ void colorButtons() {
     if (mousePressed) {
       line(mouseX, mouseY, oldX, oldY);
     }
-  }
-  oldX=mouseX;
-  oldY=mouseY;
+    //if (mousePressed) {
+      //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
+    }
+    oldX=mouseX;
+    oldY=mouseY;
+  //}
 }

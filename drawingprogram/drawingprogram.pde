@@ -36,6 +36,14 @@ color cream = #F2F2F2;
 float masterStroke= 1;
 //images
 PImage stop, playpause, mute;
+PImage tempBowl;
+//templates
+Boolean templateBowl=false, template;
+float templateBowlX, templateBowlY, templateBowlWidth, templateBowlHeight;
+//misc
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+float paperX, paperY, paperWidth, paperHeight;
+color quitButtonColour, tempBowlColor;
 
 void setup() {
 
@@ -47,12 +55,15 @@ void setup() {
   musicSetup();
   textSetup();
   populations();
-  
+
   //
-  
+
   stop = loadImage("images/stopimg.png");
   playpause = loadImage("images/playpause.png");
   mute = loadImage("images/mute2.png");
+  //templates
+  tempBowl = loadImage("images/templatebowl.png");
+
 
   //=======================================================
 }
@@ -65,9 +76,10 @@ void draw() {
   musicDraw();
   rects();
   hoverOver();
-  
   //
-  
+  templateBowl();
+  //
+
   image(stop, stopButtonX*1.060, stopButtonY*0.992);
   image(playpause, playPauseX*1.3, playPauseY*0.996);
   image(mute, muteButtonX*1.060, muteButtonY*0.996);
@@ -89,6 +101,7 @@ void mousePressed() {
   //=======================================================
 
   musicMousePressed();
+  //
 
 
   //=======================================================

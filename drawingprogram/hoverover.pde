@@ -16,4 +16,16 @@ void hoverOver() {
   } else {
     stopButtonColour = white;
   }
+  //quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight
+  if (mouseX>= quitButtonX&& mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) {
+    quitButtonColour = redC;
+  } else {
+    quitButtonColour = white;
+  }
+  //templateBowlX, templateBowlY, templateBowlWidth, templateBowlHeight
+  if (mouseX>=templateBowlX && mouseX<=templateBowlX+templateBowlWidth && mouseY>=templateBowlY && mouseY<=templateBowlY+templateBowlHeight) {
+    tempBowlColor = cream;
+  } else {
+    tempBowlColor = white;
+  }
 }
