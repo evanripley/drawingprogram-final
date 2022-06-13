@@ -26,6 +26,7 @@ void musicDraw() {
   println("Computer Number of current song:", currentSong);
   println("Song Position", song[currentSong].position(), "Song Length", song[currentSong].length() );
   //
+  strokeWeight(1);
   fill(white);
   rect(musicMetaDataX, musicMetaDataY, musicMetaDataWidth, musicMetaDataHeight);
   fill(black); //Ink, hexidecimal copied from Color Selector

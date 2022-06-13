@@ -3,7 +3,7 @@ void populations() {
   playPauseX = displayWidth*1/20;
   playPauseY = displayHeight*17/20;
   playPauseWidth = displayWidth*2/20;
-  playPauseHeight = displayHeight*2/20;
+  playPauseHeight = displayHeight*2.2/20;
   //
   muteButtonX = playPauseX*3.5;
   muteButtonY = playPauseY;
@@ -15,7 +15,7 @@ void populations() {
   stopButtonWidth = playPauseWidth;
   stopButtonHeight = playPauseHeight;
   //
-  musicMetaDataX = muteButtonX*1.9;
+  musicMetaDataX = muteButtonX*2.45;
   musicMetaDataY = playPauseY;
   musicMetaDataWidth = displayWidth*0.2/20;
   musicMetaDataHeight = playPauseHeight;
