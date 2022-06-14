@@ -47,6 +47,26 @@ void rects() {
   textFont(font, size);
   text(templateBowlString, templateBowlX, templateBowlY, templateBowlWidth, templateBowlHeight);
   //
+  //template dog
+  strokeWeight(1);
+  fill(tempDogColor); 
+  rect(templateDogX, templateDogY, templateDogWidth, templateDogHeight);
+  fill(black);
+  textAlign (CENTER, CENTER);
+  size = 20;
+  textFont(font, size);
+  text(templateDogString, templateDogX, templateDogY, templateDogWidth, templateDogHeight);
+  //
+  //template eye
+  strokeWeight(1);
+  fill(tempEyeColor); 
+  rect(templateEyeX, templateEyeY, templateEyeWidth, templateEyeHeight);
+  fill(black);
+  textAlign (CENTER, CENTER);
+  size = 20;
+  textFont(font, size);
+  text(templateEyeString, templateEyeX, templateEyeY, templateEyeWidth, templateEyeHeight);
+  //
   //
   strokeWeight(1);
   fill(redC );

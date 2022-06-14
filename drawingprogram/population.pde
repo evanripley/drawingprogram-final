@@ -41,5 +41,14 @@ void populations() {
   templateBowlWidth = displayWidth*2/20;
   templateBowlHeight = displayHeight*1/20;
   //
+  templateDogX = displayWidth*10/20;
+  templateDogY = templateBowlY;
+  templateDogWidth = templateBowlWidth;
+  templateDogHeight = templateBowlHeight;
+  //
+  templateEyeX = displayWidth*13/20;
+  templateEyeY = templateBowlY;
+  templateEyeWidth = templateBowlWidth;
+  templateEyeHeight = templateBowlHeight;
 
 }

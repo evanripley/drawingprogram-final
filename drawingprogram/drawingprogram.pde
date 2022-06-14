@@ -36,14 +36,21 @@ color cream = #F2F2F2;
 float masterStroke= 1;
 //images
 PImage stop, playpause, mute;
-PImage tempBowl;
+int bX=150, bY=150;
 //templates
-Boolean templateBowl=false, template;
+PImage tempBowlON, tempBowlOFF;
+PImage tempDogON, tempDogOFF;
+PImage tempEyeON, tempEyeOFF;
+Boolean tempBowlOnOff=false;
+Boolean tempDogOnOff=false;
+Boolean tempEyeOnOff=false;
 float templateBowlX, templateBowlY, templateBowlWidth, templateBowlHeight;
+float templateDogX, templateDogY, templateDogWidth, templateDogHeight;
+float templateEyeX, templateEyeY, templateEyeWidth, templateEyeHeight;
 //misc
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float paperX, paperY, paperWidth, paperHeight;
-color quitButtonColour, tempBowlColor;
+color quitButtonColour, tempBowlColor, tempDogColor, tempEyeColor;
 
 void setup() {
 
@@ -62,7 +69,12 @@ void setup() {
   playpause = loadImage("images/playpause.png");
   mute = loadImage("images/mute2.png");
   //templates
-  tempBowl = loadImage("images/templatebowl.png");
+  tempBowlON=loadImage("images/templatebowl2.png");
+  tempBowlOFF=loadImage("images/templatebowltrans.png");
+  tempDogON=loadImage("images/templatedog.png");
+  tempDogOFF=loadImage("images/templatebowltrans.png");
+  tempEyeON=loadImage("images/templateeye.png");
+  tempEyeOFF=loadImage("images/templatebowltrans.png");
 
 
   //=======================================================
@@ -72,13 +84,12 @@ void draw() {
 
   //=======================================================
 
+
+  templateFunctions();
   colorButtons();
   musicDraw();
   rects();
   hoverOver();
-  //
-  templateBowl();
-  //
 
   image(stop, stopButtonX*1.060, stopButtonY*0.992);
   image(playpause, playPauseX*1.3, playPauseY*0.996);
@@ -101,7 +112,9 @@ void mousePressed() {
   //=======================================================
 
   musicMousePressed();
+  templateButtons();
   //
+  if (mouseX>= quitButtonX&& mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) exit();
 
 
   //=======================================================
