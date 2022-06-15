@@ -10,6 +10,7 @@ int numberOfSongs = 3;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs]; 
 AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs];
 int currentSong = numberOfSongs - numberOfSongs;
+AudioPlayer soundEffect;
 //music rects
 float playPauseX, playPauseY, playPauseWidth, playPauseHeight;
 float muteButtonX, muteButtonY, muteButtonWidth, muteButtonHeight;
@@ -48,6 +49,7 @@ float templateBowlX, templateBowlY, templateBowlWidth, templateBowlHeight;
 float templateDogX, templateDogY, templateDogWidth, templateDogHeight;
 float templateEyeX, templateEyeY, templateEyeWidth, templateEyeHeight;
 //misc
+float rectX, rectY, rectWidth, rectHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float paperX, paperY, paperWidth, paperHeight;
 color quitButtonColour, tempBowlColor, tempDogColor, tempEyeColor;
@@ -84,7 +86,6 @@ void draw() {
 
   //=======================================================
 
-
   templateFunctions();
   colorButtons();
   musicDraw();
@@ -114,8 +115,9 @@ void mousePressed() {
   musicMousePressed();
   templateButtons();
   //
+  //
   if (mouseX>= quitButtonX&& mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) exit();
-
 
   //=======================================================
 }
+//

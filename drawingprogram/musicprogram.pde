@@ -5,17 +5,17 @@ void musicSetup() {
   song[2] = minim.loadFile ("musicdownload/freemp3.plus-ALESTORM - Shipwrecked _ Napalm Records-320.mp3");
   //
   for (int i=currentSong; i<song.length; i++) {
-  songMetaData[i] = song[i].getMetaData();
+    songMetaData[i] = song[i].getMetaData();
   }//end meta data
   //
   songMetaData[0] = song[0].getMetaData();
   songMetaData[1] = song[1].getMetaData();
   songMetaData[2] = song[2].getMetaData();
   //
-  //soundEffect[0] = minim.loadFile("musicdownload/Mouse_Click_4-fesliyanstudios.com.mp3");
+  soundEffect = minim.loadFile("musicdownload/rclick-13693.mp3");
   //
   println("Start of Console");
-  println("Click the console to Finish Starting this program"); //See previous lesson for OS-level Button
+  println("Click the console to Finish Starting this program");
   println("Title:", songMetaData[currentSong].title() );
 }
 //
@@ -29,18 +29,15 @@ void musicDraw() {
   strokeWeight(1);
   fill(white);
   rect(musicMetaDataX, musicMetaDataY, musicMetaDataWidth, musicMetaDataHeight);
-  fill(black); //Ink, hexidecimal copied from Color Selector
-  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
-  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-  textFont(font, 10); //Change the number until it fits, largest font size
-  //text(songMetaData[currentSong].title(), musicMetaDataX, musicMetaDataY, musicMetaDataWidth, musicMetaDataHeight);
+  fill(black);
+  textAlign (CENTER, CENTER);
+  textFont(font, 10);
 }
 //
 void musicKeyPressed() {
-  //Only press a number for this code below
-  if ( key=='1' || key=='9' ) { //Looping Functions
-    if ( key == '1' ) println("Looping 1 time"); //Once
-    if ( key == '9' ) println("Looping 9 times"); //Simulating Infinity
+  if ( key=='1' || key=='9' ) {
+    if ( key == '1' ) println("Looping 1 time");
+    if ( key == '9' ) println("Looping 9 times");
     String keystr = String.valueOf(key);
     println("Number of Repeats is", keystr);
     int num = int(keystr);
@@ -97,7 +94,7 @@ void musicMousePressed() {
         song[currentSong].rewind();
         song[currentSong].play();
       } else {
-        song[currentSong].play(); //Parameter is milli-seconds from start of audio file to start of playing
+        song[currentSong].play();
       }
     }
     //
@@ -109,7 +106,6 @@ void musicMousePressed() {
       }
     }//End MUTE
   }
-  //stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight
   if (mouseX>=stopButtonX && mouseX<=stopButtonX+stopButtonWidth && mouseY>=stopButtonY && mouseY<=stopButtonY+stopButtonHeight ) {//STOP Button
     if ( song[currentSong].isPlaying() ) {
       song[currentSong].pause();

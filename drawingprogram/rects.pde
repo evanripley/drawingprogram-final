@@ -103,5 +103,5 @@ void rects() {
   rect(250, 10, 50, 50);
   //
   fill(white);
-  rect(paperX, paperY, paperWidth, paperHeight);
+  rect(rectX, rectY, rectWidth, rectHeight);
 }

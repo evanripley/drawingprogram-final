@@ -26,11 +26,6 @@ void populations() {
   musicInfoHeight = playPauseHeight;
   //
   //
-  paperX = displayWidth;
-  paperY = displayHeight;
-  paperWidth = displayWidth;
-  paperHeight = displayHeight;
-  //
   quitButtonX = displayWidth*19/20;
   quitButtonY  = displayHeight*0/20;
   quitButtonWidth = displayWidth*1/20;
@@ -50,5 +45,11 @@ void populations() {
   templateEyeY = templateBowlY;
   templateEyeWidth = templateBowlWidth;
   templateEyeHeight = templateBowlHeight;
+  //
+  //
+  rectX = displayWidth;
+  rectY = displayHeight;
+  rectWidth = displayWidth;
+  rectHeight = displayHeight;
 
 }

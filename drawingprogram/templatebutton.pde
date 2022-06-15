@@ -2,18 +2,27 @@ void templateButtons() {
   //template buttons
   if (mouseX>= templateBowlX&& mouseX<=templateBowlX+templateBowlWidth && mouseY>=templateBowlY && mouseY<=templateBowlY+templateBowlHeight) {
     tempBowlOnOff = !tempBowlOnOff;
+            soundEffect.pause();
+        soundEffect.rewind();
+        soundEffect.play();
   } else {
     tempBowlOnOff = false;
   }
   //
   if (mouseX>= templateDogX&& mouseX<=templateDogX+templateDogWidth && mouseY>=templateDogY && mouseY<=templateDogY+templateDogHeight) {
     tempDogOnOff = !tempDogOnOff;
+            soundEffect.pause();
+        soundEffect.rewind();
+        soundEffect.play();
   } else {
     tempDogOnOff = false;
   }
   //
   if (mouseX>= templateEyeX&& mouseX<=templateEyeX+templateEyeWidth && mouseY>=templateEyeY && mouseY<=templateEyeY+templateEyeHeight) {
     tempEyeOnOff = !tempEyeOnOff;
+            soundEffect.pause();
+        soundEffect.rewind();
+        soundEffect.play();
   } else {
     tempEyeOnOff = false;
   }
