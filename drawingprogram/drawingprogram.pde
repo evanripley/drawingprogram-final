@@ -13,7 +13,9 @@ int currentSong = numberOfSongs - numberOfSongs;
 AudioPlayer soundEffect;
 //music rects
 float playPauseX, playPauseY, playPauseWidth, playPauseHeight;
+float playPauseTextX, playPauseTextY, playPauseTextWidth, playPauseTextHeight;
 float muteButtonX, muteButtonY, muteButtonWidth, muteButtonHeight;
+float muteTextX, muteTextY, muteTextWidth, muteTextHeight;
 float stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight;
 float musicMetaDataX, musicMetaDataY, musicMetaDataWidth, musicMetaDataHeight;
 float musicInfoX, musicInfoY, musicInfoWidth, musicInfoHeight;

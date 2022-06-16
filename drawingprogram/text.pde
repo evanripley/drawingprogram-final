@@ -3,6 +3,8 @@ String musicInfo = "pause>' n ' goes to next song -- pause>' b ' goes to previou
 String templateBowlString = "Bowl";
 String templateDogString = "Dog";
 String templateEyeString = "Eye";
+String playPausetxt = "Play / Pause";
+String mutetxt = "Mute";
 //
 PFont font;
 int initialFontSize=55;

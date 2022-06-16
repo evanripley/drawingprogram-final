@@ -1,6 +1,6 @@
 void rects() {
   //rects
-  //
+  //playPauseTextX, playPauseTextY, playPauseTextWidth, playPauseTextHeight
   //
   //quit
   fill(quitButtonColour);
@@ -17,12 +17,22 @@ void rects() {
   fill(playPauseColour); 
   rect(playPauseX, playPauseY, playPauseWidth, playPauseHeight);
   //
+  //playpausetxt
+  strokeWeight(1);
+  fill(white); 
+  rect(playPauseTextX, playPauseTextY, playPauseTextWidth, playPauseTextHeight);
+  fill(black);
+  textAlign (CENTER, CENTER);
+  size = 20;
+  textFont(font, size);
+  text(playPausetxt, playPauseTextX, playPauseTextY, playPauseTextWidth, playPauseTextHeight);
+  //
   //music info
   strokeWeight(1);
   fill(white); 
   rect(musicInfoX, musicInfoY, musicInfoWidth, musicInfoHeight);
   fill(black);
-  textAlign (CENTER, TOP);
+  textAlign (CENTER, CENTER);
   size = 20;
   textFont(font, size);
   text(musicInfo, musicInfoX, musicInfoY, musicInfoWidth, musicInfoHeight);
@@ -31,6 +41,16 @@ void rects() {
   strokeWeight(1);
   fill(muteButtonColour); 
   rect(muteButtonX, muteButtonY, muteButtonWidth, muteButtonHeight);
+  //
+  //Mute txt
+  strokeWeight(1);
+  fill(white); 
+  rect(muteTextX, muteTextY, muteTextWidth, muteTextHeight);
+  fill(black);
+  textAlign (CENTER, CENTER);
+  size = 20;
+  textFont(font, size);
+  text(mutetxt, muteTextX, muteTextY, muteTextWidth, muteTextHeight);
   //
   //stop
   strokeWeight(1);
